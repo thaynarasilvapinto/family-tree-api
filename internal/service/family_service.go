@@ -19,3 +19,11 @@ func (s *FamilyService) Create(f *entity.Family) error {
 	}
 	return nil
 }
+
+func (s *FamilyService) FindFamilyById(id int64) ([]entity.Family, error) {
+	return s.repo.FindFamilyById(id)
+}
+
+func (s *FamilyService) FindById(id int64) (entity.Family, error) {
+	return s.repo.FindById(id)
+}

@@ -1,9 +1,9 @@
 package entity
 
 type Family struct {
-	ID       int64
-	Name     string
-	Lft      int64
-	Rgt      int64
-	ParentId int64
+	Id         int64
+	Name       string
+	ParentId1  *int64
+	ParentId2  *int64
+	Generation *int
 }
