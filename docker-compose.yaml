@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:14.0
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=family_tree
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=12345678
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - MAX_CONNECTIONS=300
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
