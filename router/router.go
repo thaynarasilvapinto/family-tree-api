@@ -15,6 +15,7 @@ func Router(familyService familyService.FamilyService) {
 	router := mux.NewRouter()
 	handler := &api.Handler{FamilyService: familyService}
 	router.HandleFunc("/family/history/{id}", handler.GetFamilyTree).Methods("GET")
+	router.HandleFunc("/family/member", handler.InsertMember).Methods("POST")
 
 	fmt.Println("Server is up and running on localhost:8080")
 	http.ListenAndServe(":8080", router)
