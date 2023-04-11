@@ -8,7 +8,7 @@ import (
 
 func Configuration() {
 
-	err := godotenv.Load("app.env")
+	err := godotenv.Load("family-tree.env")
 
 	if err != nil {
 		fmt.Println("Error loading .env file")
