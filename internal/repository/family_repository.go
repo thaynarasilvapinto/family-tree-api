@@ -16,7 +16,7 @@ func NewFamilyRepository(db *postgres.PostgresDatabase) *FamilyRepository {
 }
 
 func (r *FamilyRepository) Create(family *entity.Family) error {
-	query := `INSERT INTO family (name, parent_id, name, parent1_id, parent2_id) VALUES ($1, $2, $3, $4) RETURNING id`
+	query := `INSERT INTO family_tree (name, parent1_id, parent2_id) VALUES ($1, $2, $3) RETURNING id`
 
 	rows, err := r.db.Query(query, family.Name, family.ParentId1, family.ParentId2)
 	if err != nil {

@@ -21,8 +21,8 @@ type MemberResponse struct {
 }
 
 type MemberRequest struct {
-	Name         string                `json:"name"`
-	Relationship []RelationshipRequest `json:"relationship"`
+	Name         string              `json:"name"`
+	Relationship RelationshipRequest `json:"relationship"`
 }
 
 type RelationshipRequest struct {
@@ -31,6 +31,6 @@ type RelationshipRequest struct {
 }
 
 type ParentRequest struct {
-	Parent1 int64 `json:"parent1"`
-	Parent2 int64 `json:"parent2"`
+	Parent1 *int64 `json:"parent1"`
+	Parent2 *int64 `json:"parent2"`
 }
