@@ -12,3 +12,15 @@ services:
       - MAX_CONNECTIONS=300
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  postgres_test:
+    image: postgres:14.0
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=family_tree_test
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test1234
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - MAX_CONNECTIONS=300
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

@@ -42,3 +42,24 @@ func (l *myLogger) Info(msg string, v ...interface{}) {
 	}
 	l.infoLog.Output(2, msg)
 }
+
+func Error(msg string, v ...interface{}) {
+	if len(v) > 0 {
+		msg = fmt.Sprintf(msg, v...)
+	}
+	logger.errorLog.Output(2, msg)
+}
+
+func Warning(msg string, v ...interface{}) {
+	if len(v) > 0 {
+		msg = fmt.Sprintf(msg, v...)
+	}
+	logger.warningLog.Output(2, msg)
+}
+
+func Info(msg string, v ...interface{}) {
+	if len(v) > 0 {
+		msg = fmt.Sprintf(msg, v...)
+	}
+	logger.infoLog.Output(2, msg)
+}

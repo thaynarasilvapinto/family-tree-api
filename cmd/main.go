@@ -8,10 +8,12 @@ import (
 	storage "github.com/thaynarasilvapinto/family-tree-api/internal/adapter/postgres"
 	familyRepository "github.com/thaynarasilvapinto/family-tree-api/internal/repository"
 	familyService "github.com/thaynarasilvapinto/family-tree-api/internal/service"
+	logger "github.com/thaynarasilvapinto/family-tree-api/logger"
 	router "github.com/thaynarasilvapinto/family-tree-api/router"
 )
 
 func main() {
+	logger.Info("Start application...")
 	config.Configuration()
 
 	host := os.Getenv("DATABASE_HOST")
@@ -27,6 +29,5 @@ func main() {
 	}
 	familyRepository := familyRepository.NewFamilyRepository(connect)
 	familyService := familyService.NewFamilyService(familyRepository)
-
 	router.Router(*familyService)
 }
