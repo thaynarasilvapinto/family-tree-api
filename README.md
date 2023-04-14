@@ -122,7 +122,7 @@ Substitua o conteúdo do campo data pelas informações do novo membro que desej
 
 ```JSON
 {
-    "message": "these parents cannot be parents since they are related"
+    "message": "description"
 }
 ```
 Caso a operação seja bem sucedida, o retorno esperado é:
@@ -136,3 +136,16 @@ Caso a operação seja bem sucedida, o retorno esperado é:
     "Generation": null
 }
 ```
+
+
+# Exemplo de árvore genealógica já inserida no banco de dados, quando você iniciar o projeto ele vai inserir essa arvore automaticamente
+
+Esta é a árvore genealógica
+
+![árvore genealógica](assets/family.png)
+
+Estes são seus respectivos IDS
+
+![Lista de ids e nomes](assets/id.png)
+
+
