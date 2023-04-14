@@ -138,13 +138,15 @@ Caso a operação seja bem sucedida, o retorno esperado é:
 ```
 
 
-# Exemplo de árvore genealógica já inserida no banco de dados, quando você iniciar o projeto ele vai inserir essa arvore automaticamente
+# Exemplo de árvore genealógica já inserida no banco de dados
 
-Esta é a árvore genealógica
+Quando você iniciar o projeto ele vai inserir essa árvore automaticamente.
+
+Esta é a árvore genealógica.
 
 ![árvore genealógica](assets/family.png)
 
-Estes são seus respectivos IDS
+Estes são seus respectivos IDS.
 
 ![Lista de ids e nomes](assets/id.png)
 
