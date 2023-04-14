@@ -35,14 +35,11 @@ Para executar o projeto está na pasta raiz do projeto e navege até a pagina de
 
 execute o compandos 
 - go build 
-- go run main.o 
+- go run main.go 
 
 se preferir pode utilizar um arquivo launch.json para executar o codigo no VSCode
 ```JSON
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -63,7 +60,7 @@ se preferir pode utilizar um arquivo launch.json para executar o codigo no VSCod
 ### 1. Consulta de histórico familiar
 Para consultar o histórico familiar de uma pessoa, utilize o endpoint
 
-```JSON
+```CURL
 curl --location 'localhost:8080/family/history/{id}'
 ```
 
@@ -103,7 +100,7 @@ Retorno esperado:
 ### 2. Adicionar novo membro
 Para adicionar um novo membro à árvore genealógica, utilize o endpoint:
 
-```JSON
+```CURL
 curl --location 'localhost:8080/family/member' \
 --header 'Content-Type: application/json' \
 --data '{
